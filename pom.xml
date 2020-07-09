@@ -7,6 +7,7 @@
     <groupId>cn.zjl</groupId>
     <artifactId>ssm</artifactId>
     <version>1.0</version>
+    <packaging>war</packaging>
 <dependencies>
     <!-- 单元测试 -->
     <dependency>
