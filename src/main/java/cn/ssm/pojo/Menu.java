@@ -9,7 +9,7 @@ public class Menu implements Serializable {
     /**
      * 菜单ID 唯一标识
      */
-    private int menuId;
+    private Long menuId;
 
     /**
      * 菜单名称
@@ -19,12 +19,8 @@ public class Menu implements Serializable {
     /**
      * 父菜单ID 默认为-1
      */
-    private int parentMenuId;
+    private Long parentMenuId;
 
-    /**
-     * 菜单层级
-     */
-    private int menuHierarchy;
 
     /**
      * 菜单URL
@@ -34,7 +30,7 @@ public class Menu implements Serializable {
     /**
      * 菜单优先级
      */
-    private int menuPriority;
+    private Integer menuPriority;
 
     /**
      * 是否是叶子菜单
@@ -42,13 +38,13 @@ public class Menu implements Serializable {
      * 1 是
      * 只有叶子菜单才有url
      */
-    private int isLeafMunu;
+    private Integer isLeafMenu;
 
-    public int getMenuId() {
+    public Long getMenuId() {
         return menuId;
     }
 
-    public void setMenuId(int menuId) {
+    public void setMenuId(Long menuId) {
         this.menuId = menuId;
     }
 
@@ -60,21 +56,14 @@ public class Menu implements Serializable {
         this.menuName = menuName;
     }
 
-    public int getParentMenuId() {
+    public Long getParentMenuId() {
         return parentMenuId;
     }
 
-    public void setParentMenuId(int parentMenuId) {
+    public void setParentMenuId(Long parentMenuId) {
         this.parentMenuId = parentMenuId;
     }
 
-    public int getMenuHierarchy() {
-        return menuHierarchy;
-    }
-
-    public void setMenuHierarchy(int menuHierarchy) {
-        this.menuHierarchy = menuHierarchy;
-    }
 
     public String getMenuUrl() {
         return menuUrl;
@@ -84,11 +73,19 @@ public class Menu implements Serializable {
         this.menuUrl = menuUrl;
     }
 
-    public int getMenuPriority() {
+    public Integer getMenuPriority() {
         return menuPriority;
     }
 
-    public void setMenuPriority(int menuPriority) {
+    public void setMenuPriority(Integer menuPriority) {
         this.menuPriority = menuPriority;
+    }
+
+    public Integer getIsLeafMenu() {
+        return isLeafMenu;
+    }
+
+    public void setIsLeafMenu(Integer isLeafMenu) {
+        this.isLeafMenu = isLeafMenu;
     }
 }

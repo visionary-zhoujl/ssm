@@ -7,7 +7,15 @@ public class Role implements Serializable {
     /**
      * 角色ID 唯一标识
      */
-    private int roleId;
+    private Long roleId;
+
+    public Long getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Long roleId) {
+        this.roleId = roleId;
+    }
 
     /**
      * 角色名称
@@ -18,14 +26,6 @@ public class Role implements Serializable {
      * 创建时间
      */
     private Date createTime;
-
-    public int getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(int roleId) {
-        this.roleId = roleId;
-    }
 
     public String getRoleName() {
         return roleName;

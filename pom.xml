@@ -140,6 +140,13 @@
         <artifactId>commons-collections</artifactId>
         <version>3.2</version>
     </dependency>
+
+    <!-- pagehelper插件  mybatis分页插件-->
+    <dependency>
+        <groupId>com.github.pagehelper</groupId>
+        <artifactId>pagehelper</artifactId>
+        <version>5.1.11</version>
+    </dependency>
 </dependencies>
     <build>
         <finalName>ssmdemo</finalName>

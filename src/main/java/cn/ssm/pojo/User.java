@@ -11,22 +11,26 @@ public class User implements Serializable {
     /**
      * 用户ID 唯一标识
      */
-    private int userId;
+    private Long userId;
+
+    public void setUserId(long userId) {
+        this.userId = userId;
+    }
 
     /**
      * 登录名
      */
-    private int loginName;
+    private String loginName;
 
     /**
      * 登录密码
      */
-    private int loginPassword;
+    private String loginPassword;
 
     /**
      * 用户昵称
      */
-    private int userName;
+    private String userName;
 
     /**
      * 手机号
@@ -51,37 +55,33 @@ public class User implements Serializable {
     /**
      * 登录次数
      */
-    private int loginCount;
+    private Integer loginCount;
 
-    public int getUserId() {
+    public long getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
-
-    public int getLoginName() {
+    public String getLoginName() {
         return loginName;
     }
 
-    public void setLoginName(int loginName) {
+    public void setLoginName(String loginName) {
         this.loginName = loginName;
     }
 
-    public int getLoginPassword() {
+    public String getLoginPassword() {
         return loginPassword;
     }
 
-    public void setLoginPassword(int loginPassword) {
+    public void setLoginPassword(String loginPassword) {
         this.loginPassword = loginPassword;
     }
 
-    public int getUserName() {
+    public String getUserName() {
         return userName;
     }
 
-    public void setUserName(int userName) {
+    public void setUserName(String userName) {
         this.userName = userName;
     }
 
