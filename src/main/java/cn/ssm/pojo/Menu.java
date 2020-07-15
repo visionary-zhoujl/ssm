@@ -1,6 +1,7 @@
 package cn.ssm.pojo;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @author le
@@ -40,6 +41,11 @@ public class Menu implements Serializable {
      */
     private Integer isLeafMenu;
 
+    /**
+     * 创建时间
+     */
+    private Date createTime;
+
     public Long getMenuId() {
         return menuId;
     }
@@ -64,7 +70,6 @@ public class Menu implements Serializable {
         this.parentMenuId = parentMenuId;
     }
 
-
     public String getMenuUrl() {
         return menuUrl;
     }
@@ -87,5 +92,13 @@ public class Menu implements Serializable {
 
     public void setIsLeafMenu(Integer isLeafMenu) {
         this.isLeafMenu = isLeafMenu;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 }

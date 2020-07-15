@@ -5,7 +5,13 @@
 <mapper namespace="cn.ssm.dao.UserDao">
     <select id="queryAll" resultType="User">
         SELECT
-        *
+            user_id,
+            login_name,
+            user_name,
+            last_login_time,
+            login_count,
+            email,
+            mobile
         FROM
         `user`
     </select>
@@ -42,7 +48,13 @@
 
     <select id="queryUserListByUserName" parameterType="String" resultType="User">
         SELECT
-        *
+               user_id,
+               login_name,
+               user_name,
+               last_login_time,
+               login_count,
+               email,
+               mobile
         FROM
         `user`
         WHERE
@@ -51,7 +63,21 @@
         concat('%',#{userName},'%')
     </select>
 
-    <delete id="deleteUserById" parameterType="long">
+    <delete id="deleteUserById" parameterType="Long">
         DELETE FROM `user` WHERE `user_id`=#{value}
     </delete>
+
+    <select id="queryUserById" parameterType="Long" resultType="User">
+        SELECT
+            user_id,
+            login_name,
+            user_name,
+            last_login_time,
+            login_count,
+            email,
+            mobile
+        FROM
+             `user`
+        WHERE user_id=#{userId}
+    </select>
 </mapper>

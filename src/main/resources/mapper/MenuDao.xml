@@ -5,10 +5,65 @@
 <mapper namespace="cn.ssm.dao.MenuDao">
     <select id="queryAllTopMenu" resultType="Menu">
         SELECT
-        *
+        menu_id,
+        menu_name,
+        menu_url,
+        parent_menu_id,
+        menu_priority,
+        is_leaf_menu,
+        create_time
         FROM
         `menu`
         WHERE
-        parent_menu_id = -1L
+        parent_menu_id = -1
+    </select>
+
+    <insert id="addMenu" parameterType="Menu">
+        INSERT INTO
+        `menu`(menu_id, menu_name, menu_url, parent_menu_id, menu_priority, is_leaf_menu, create_time)
+        values(#{menuId},#{menuName},#{menuUrl},#{parentMenuId},#{menuPriority},#{isLeafMenu},#{createTime})
+    </insert>
+
+    <update id="updateMenuById" parameterType="Menu">
+        UPDATE `menu` SET
+        menu_name=#{menuName},menu_url=#{menuUrl},menu_priority=#{menuPriority},
+        is_leaf_menu=#{isLeafMenu},parent_menu_id=#{parentMenuId}
+        WHERE
+        menu_id=#{menuId}
+    </update>
+
+    <delete id="deleteMenuById" parameterType="Long">
+        DELETE FROM `menu`
+        WHERE menu_id = #{menuId}
+    </delete>
+    
+    <select id="queryChildMenu" parameterType="Long" resultType="Menu">
+        SELECT
+        menu_id,
+        menu_name,
+        menu_url,
+        parent_menu_id,
+        menu_priority,
+        is_leaf_menu,
+        create_time
+        FROM
+        `menu`
+        WHERE
+        parent_menu_id=#{parentMenuId}
+    </select>
+
+    <select id="queryByMenuId" parameterType="Long" resultType="Menu">
+        SELECT
+        menu_id,
+        menu_name,
+        menu_url,
+        parent_menu_id,
+        menu_priority,
+        is_leaf_menu,
+        create_time
+        FROM
+        `menu`
+        WHERE
+        menu_id=#{menuId}
     </select>
 </mapper>

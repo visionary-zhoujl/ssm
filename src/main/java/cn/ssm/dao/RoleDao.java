@@ -1,6 +1,7 @@
 package cn.ssm.dao;
 
 import cn.ssm.pojo.Role;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -14,6 +15,13 @@ public interface RoleDao {
      * @return 符合条件的角色列表
      */
     List<Role> queryAllRole();
+
+    /**
+     * 根据角色ID查询角色信息
+     * @param roleId 查询的角色ID
+     * @return 角色信息
+     */
+    Role queryRoleById(@Param("roleId") Long roleId);
 
     /**
      * 添加一个角色
@@ -34,6 +42,6 @@ public interface RoleDao {
      * @param roleId 角色ID
      * @return 删除结果
      */
-    int deleteRoleById(Long roleId);
+    int deleteRoleById(@Param("roleId") Long roleId);
 
 }

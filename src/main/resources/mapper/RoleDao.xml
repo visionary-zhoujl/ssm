@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper>
-<mapper namespace="">
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ssm.dao.RoleDao">
+    <select id="queryAllRole" resultType="Role">
+        SELECT
+        role_id,
+        role_name,
+        create_time
+        FROM `role`
+    </select>
 
+    <insert id="addRole" parameterType="Role">
+        INSERT INTO role(role_id, role_name, create_time)
+        VALUES(#{roleId},#{roleName},#{createTime})
+    </insert>
+
+    <update id="updateByRoleId" parameterType="Role">
+        UPDATE `role`
+        SET role_name=#{roleName}
+        WHERE role_id=#{roleId}
+    </update>
+
+    <delete id="deleteRoleById" parameterType="Long">
+        DELETE FROM `role` WHERE role_id=#{roleId}
+    </delete>
+
+    <select id="queryRoleById" parameterType="Long" resultType="Role">
+        SELECT
+            role_id,
+            role_name,
+            create_time
+        FROM `role`
+        WHERE role_id=#{roleId}
+        </select>
 </mapper>

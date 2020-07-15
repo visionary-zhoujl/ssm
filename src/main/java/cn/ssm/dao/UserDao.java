@@ -1,5 +1,6 @@
 package cn.ssm.dao;
 
+import cn.ssm.pojo.Role;
 import cn.ssm.pojo.User;
 import org.apache.ibatis.annotations.Param;
 
@@ -18,8 +19,16 @@ public interface UserDao {
     /**
      * 根据userId修改用户信息
      * @param user   需要修改的用户信息
+     * @return int
      */
-    void updateById(User user);
+    int updateById(User user);
+
+    /**
+     * 根据用户ID查询用户信息
+     * @param userId 查询的用户ID
+     * @return 用户信息
+     */
+    User queryUserById(@Param("userId") Long userId);
 
     /**
      * 添加用户
