@@ -3,7 +3,7 @@ package cn.ssm.service.impl;
 import cn.ssm.dao.UserDao;
 import cn.ssm.pojo.User;
 import cn.ssm.service.IUserService;
-import cn.ssm.util.GenerateParmeKey;
+import cn.ssm.util.GenerateParamKey;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * @author zhoujl
- * 普通用户服务实现类
+ * 简单用户服务实现类
  */
 @Service("SimpleUserService")
 public class SimpleUserServiceImpl implements IUserService {
@@ -28,7 +28,7 @@ public class SimpleUserServiceImpl implements IUserService {
 
     @Override
     public int addUser(User user) {
-        long userId = GenerateParmeKey.snowflakeGenerate();
+        long userId = GenerateParamKey.snowflakeGenerate();
         user.setUserId(userId);
         return userDao.addUser(user);
     }

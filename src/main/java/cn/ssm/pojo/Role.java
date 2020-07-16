@@ -3,6 +3,9 @@ package cn.ssm.pojo;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * @author zhoujl
+ */
 public class Role implements Serializable {
     /**
      * 角色ID 唯一标识

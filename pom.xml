@@ -141,7 +141,7 @@
         <version>3.2</version>
     </dependency>
 
-    <!-- pagehelper插件  mybatis分页插件-->
+    <!-- pageHelper插件  mybatis分页插件-->
     <dependency>
         <groupId>com.github.pagehelper</groupId>
         <artifactId>pagehelper</artifactId>
@@ -149,7 +149,7 @@
     </dependency>
 </dependencies>
     <build>
-        <finalName>ssmdemo</finalName>
+        <finalName>ssm</finalName>
     </build>
 
 </project>
