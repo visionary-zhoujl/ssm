@@ -8,8 +8,6 @@
             user_id,
             login_name,
             user_name,
-            last_login_time,
-            login_count,
             email,
             mobile
         FROM
@@ -51,8 +49,6 @@
                user_id,
                login_name,
                user_name,
-               last_login_time,
-               login_count,
                email,
                mobile
         FROM
@@ -72,8 +68,6 @@
             user_id,
             login_name,
             user_name,
-            last_login_time,
-            login_count,
             email,
             mobile
         FROM

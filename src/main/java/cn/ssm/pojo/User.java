@@ -47,16 +47,6 @@ public class User implements Serializable {
      */
     private Date createTime;
 
-    /**
-     * 上次登录时间
-     */
-    private Date lastLoginTime;
-
-    /**
-     * 登录次数
-     */
-    private Integer loginCount;
-
     public long getUserId() {
         return userId;
     }
@@ -109,19 +99,4 @@ public class User implements Serializable {
         this.createTime = createTime;
     }
 
-    public Date getLastLoginTime() {
-        return lastLoginTime;
-    }
-
-    public void setLastLoginTime(Date lastLoginTime) {
-        this.lastLoginTime = lastLoginTime;
-    }
-
-    public int getLoginCount() {
-        return loginCount;
-    }
-
-    public void setLoginCount(int loginCount) {
-        this.loginCount = loginCount;
-    }
 }
